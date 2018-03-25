@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TODO: Complete meta -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://engineering.purdue.edu/dcsl/xmlrpc.php">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+
+<title>Privacy Preserving Communication | Dependable Computing Systems Laboratory</title>
+<link rel="alternate" type="application/rss+xml" title="Dependable Computing Systems Laboratory &raquo; Feed" href="https://engineering.purdue.edu/dcsl/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dependable Computing Systems Laboratory &raquo; Comments Feed" href="https://engineering.purdue.edu/dcsl/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/engineering.purdue.edu\/dcsl\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='collapseomatic-css-css'  href='https://engineering.purdue.edu/dcsl/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='dcsl-bootstrap-css'  href='https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/css/bootstrap.min.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dcsl-style-css'  href='https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/style.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dcsl-fontawesome-css'  href='https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/font-awesome/css/font-awesome.min.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://engineering.purdue.edu/dcsl/wp-content/plugins/tablepress/css/default.min.css?ver=1.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://engineering.purdue.edu/dcsl/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='https://engineering.purdue.edu/dcsl/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://engineering.purdue.edu/dcsl/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://engineering.purdue.edu/dcsl/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3" />
+<link rel='canonical' href='https://engineering.purdue.edu/dcsl/project/privacy-preserving-communication/' />
+<link rel='shortlink' href='https://engineering.purdue.edu/dcsl/?p=42' />
+
+<!-- teachPress -->
+<script type="text/javascript" src="https://engineering.purdue.edu/dcsl/wp-content/plugins/teachpress/js/frontend.js?ver=6.0.4"></script>
+<link type="text/css" href="https://engineering.purdue.edu/dcsl/wp-content/plugins/teachpress/styles/teachpress_front.css?ver=6.0.4" rel="stylesheet" />
+<!-- END teachPress -->
+</head>
+
+<body class="page page-id-42 page-child parent-pageid-7 page-template-default">
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<!-- Navigation -->
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://engineering.purdue.edu/dcsl"><div style="font-family: 'Chewy', cursive;">DCSL</div></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="menu-primary" class="nav navbar-nav navbar-right"><li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a title="About" href="https://engineering.purdue.edu/dcsl/about/">About</a></li>
+<li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206"><a title="News" href="https://engineering.purdue.edu/dcsl/dcslnews/">News</a></li>
+<li id="menu-item-344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"><a title="Team Members" href="https://engineering.purdue.edu/dcsl/team-members/">Team Members</a></li>
+<li id="menu-item-161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a title="Projects" href="https://engineering.purdue.edu/dcsl/project/">Projects</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a title="Presentations" href="https://engineering.purdue.edu/dcsl/presentations/">Presentations</a></li>
+<li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a title="Publications" href="https://engineering.purdue.edu/dcsl/publications-by-year/">Publications</a></li>
+<li id="menu-item-173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173 dropdown"><a title="Activities" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Activities <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a title="Reading Group" href="https://engineering.purdue.edu/dcsl/reading-group/">Reading Group</a></li>
+	<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a title="Socials" href="https://engineering.purdue.edu/dcsl/socials/">Socials</a></li>
+</ul>
+</li>
+</ul>            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/images/banner.jpg');"></div>
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/images/banner2.jpg');"></div>
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/07/problem_diagnosis.jpg');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>Workflow for doing automatic problem diagnosis in large-scale systems using our technology, Orion (2014)</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/07/automaded.jpg');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>AutomaDeD workflow: Root cause analysis using similarity in processes of parallel programs (2014)</h2>
+                </div>
+            </div>
+ 	    <div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/10/EuroSys_2016_Fig2.png');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>Partial Parallel Repair:  Comparison of data transfer pattern between traditional and PPR
+reconstruction for RS (EuroSys 2016)</h2>
+                </div>
+            </div>
+	   <div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/10/SmartGridComm_2016_Fig21.png');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>SecAMI Architecture (SmartGridComm 2015)</h2>
+                </div>
+            </div>
+  	  
+<div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/10/MobVi_2016_Fig21.png');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>Prediction based adaptation system for Mobile Video Streaming (MoVid 2016)</h2>
+                </div>
+            </div>
+
+<div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/10/ICAC_2015_Fig3.png');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>ICE workflow: An Integrated Configuration Engine for Interference Mitigation in Cloud Services (ICAC 2015)</h2>                </div>
+            </div>
+
+<div class="item">
+                <div class="fill" style="background-image:url('https://engineering.purdue.edu/dcsl/wp-content/uploads/2016/10/IPSN_2015_Fig1.png');background-size: 100% 100%;"></div>
+                <div class="carousel-caption">
+                    <h2>TARDIS workflow: Software-Only System-Level Record and Replay in Wireless Sensor Networks (IPSN 2015)</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+    <br /><br />
+        <!-- Page Content -->
+        <div class="container">
+
+
+<!--
+<div id="page" class="hfeed site">
+
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <h1 class="site-title"><a href="https://engineering.purdue.edu/dcsl/" rel="home">Dependable Computing Systems Laboratory</a></h1>
+            <h2 class="site-description">The activities of the Dependable Computing Systems Lab at Purdue University.</h2>
+        </div>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle" aria-controls="menu" aria-expanded="false">Primary Menu</button>
+            <div class="menu-primary-container"><ul id="menu-primary-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://engineering.purdue.edu/dcsl/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206"><a href="https://engineering.purdue.edu/dcsl/dcslnews/">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"><a href="https://engineering.purdue.edu/dcsl/team-members/">Team Members</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a href="https://engineering.purdue.edu/dcsl/project/">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://engineering.purdue.edu/dcsl/presentations/">Presentations</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="https://engineering.purdue.edu/dcsl/publications-by-year/">Publications</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173"><a href="http://https://engineering.purdue.edu/dcsl/reading-group/">Activities</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a href="https://engineering.purdue.edu/dcsl/reading-group/">Reading Group</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a href="https://engineering.purdue.edu/dcsl/socials/">Socials</a></li>
+</ul>
+</li>
+</ul></div>        </nav>
+    </header>
+
+     -->
+
+<div class="row">
+		<div class="col-lg-8">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
+
+					
+						
+
+<article id="post-42" class="post-42 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Privacy Preserving Communication</h1>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h2>Overview</h2>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#goals">Achieved Technical Goals</a></li>
+<li><a href="#students">Students</a></li>
+</ul>
+<p><a name="summary"></a></p>
+<h2>Summary</h2>
+<p>With the growing demand for adaptive and intelligent communication networks, content-based publish subscribe (CBPS) has gained significant attention in the research community over the last decade. Publish-subscribe in general is a communication technique whereby publishers &#8220;publish&#8221; messages and a set of subscribers receive these messages. This is more efficient than a publisher sending multiple point-to-point messages to each subscriber. Publish-subscribe offers a degree of decoupling between the publishers and the subscribers&#8212;a network of brokers together route the messages from a publisher to the correct set of subscribers. In CBPS systems, the subscriber defines a filter (a logical expression) on the content of a message, such as, a diabetic patient may be interested in availability of a drug named `Glucotrol&#8217; where the store zip code is either `47906&#8242; or `47907&#8242; and unit price is less than `$3&#8242;. Only messages (termed Notifications) matching the filter will be delivered to our hypothetical patient. This scenario is depicted in the figure below. Here the brokers execute sophisticated algorithms for matching messages with constraints on attribute values in the filter (such as sub-string, equality, inequality).</p>
+<p align="center"><img class="img-thumbnail aligncenter" src="https://engineering.purdue.edu/dcsl/images/privacy_summary_figure1.jpg" alt="figure1" width="363" height="214" /></p>
+<p>However, CBPS systems rely heavily on the integrity of brokers. Researchers have shown that achieving message confidentiality, integrity, and auditability in the presence of malicious brokers is a challenging assignment. Consider the following scenario: Our hypothetical patient Jane is infected with HIV. She wants to subscribe for drug availability and preventive care newsletters for her disease from an online health information exchange that uses CBPS for content delivery. Due to the sensitivity of her disease, Jane doesn&#8217;t want the brokers to learn about her subscription. Similarly, Dr. Watson, a publisher in the health information exchange, doesn&#8217;t want to divulge contents of his messages to the brokers. But normal functioning of CBPS requires that the brokers should inspect both pieces of information (notifications and subscriptions) to route messages. In this project, we solve this paradoxical problem of computing routing decisions based on encrypted notification and subscriptions, denoted hereafter as the <strong>Secure Routing Problem in CBPS</strong>. A solution to the orthogonal problem, that of computation and distribution of group keys in CBPS may be found elsewhere [Usenix Security 2001, Prakash et al.].</p>
+<p>We make the important observation that routing in content-based publish-subscribe networks does not necessarily require inspection of the whole message. Instead, if a trusted publisher extracts the routing information from a message before encrypting it, then the problem reduces to hiding this information from malicious brokers. A level of <em>indirection</em> in naming of filters combined with <em>separation of duty</em> transforms the paradoxical problem to a practical one. In our solution approach, the publisher looks at the commonality of interests among subscribers and encodes the routing information in the form of a routing vector. The routing vector (RV) is added to the header of a message and it allows brokers to compute their receiver lists. We present two versions of our protocol&#8212;one where the RV is left unencrypted (termed the RV protocol), and the second where the RV is further encrypted to achieve both confidentiality and anonymity (termed Secure RV or SRV protocol). The collection of these two protocols is termed <a href="https://engineering.purdue.edu/dcsl/publications/papers/2011/securecomm11_cbps.pdf">v-CAPS: <span style="text-decoration: underline;">C</span>onfidentiality and <span style="text-decoration: underline;">A</span>nonymity preserving routing protocol for content-based <span style="text-decoration: underline;">P</span>ublish-<span style="text-decoration: underline;">S</span>ubscribe networks using routing <em><span style="text-decoration: underline;">v</span></em>ectors</a>. Our simple approach eliminates the need for complex cryptographic operations, thereby, making it possible to incorporate the full generality of filters in baseline CBPS systems, with low computational overhead on the brokers. Our experimental results show that RV performs nearly as fast as a baseline CBPS in terms of latency. Achieving perfect anonymity (which we do through the SRV protocol), however, is significantly more costly and practical only for medium-sized networks.</p>
+<p><a name="goals"></a></p>
+<h2 style="text-align: left;" align="center">Achieved Technical Goals</h2>
+<p>We evaluated the performance of our protocols against baseline CBPS (<a href="http://www.inf.usi.ch/carzaniga/siena/forwarding/index.html">Siena</a>) with respect to end-to-end latency and computation time for notifications in a wide-area deployment. We implemented all the three protocols Baseline, RV, and SRV; and deployed them on <a href="http://www.planet-lab.org">PlanetLab</a>, a worldwide computer systems testbed. Our experiments involve sending upto 100,000 subscription messages from the subscribers over a wide-area network, which, to the best of our knowledge, are the largest scale experiments on secure CBPS.</p>
+<p>In our experiments, we created a hierarchical broker network with 4 levels (refer figure below). Each of the brokers in the top three levels were considered to have a fanout of 3, whereas, the leaf brokers were randomly connected to the subscribers. This constituted a broker network with 40 nodes. Each broker was hosted on a separate machine at Purdue University, 28 of which belonged to two clusters in our research group and the rest on public desktops in one of Purdue University laboratories. The subscribers were hosted on PlanetLab machines situated at widely varying geographical locations. We ran our experiments with upto 1000 subscribers hosted on 50 PlanetLab machines (i.e. 20 subscriber processes per machine). Each subscriber subscribed with 1-200 filters with a uniform random distribution, generating 100,000 subscriptions in our largest workload. <strong>In total, the experiments involved coordination between 1132 processes running on 91 machines over the Internet</strong><em>.</em></p>
+<p align="center"><img class="img-thumbnail  alignnone" src="https://engineering.purdue.edu/dcsl/images/privacy_status_figure1.png" alt="figure1" width="307" height="193" /></p>
+<p>Our key observations from the experiments are presented below. All comparisons are done based on our largest workload, i.e. with 100,000 subscriptions, and hence are valid for smaller workloads.</p>
+<ol>
+<li>End-to-end latencies for baseline and RV are very similar. In baseline, end-to-end latency for all the nodes is within 5 ms of network RTT, whereas, in RV, this is within 10 ms of network RTT. End-to-end latency in SRV, is however significantly higher than network RTT. This happens due to large matching time at the brokers.</li>
+<li>Even with the largest workload, the difference in computational time between RV and baseline is only 3 ms. The computational cost for SRV is, however, 2 orders of magnitude higher than RV (600 ms in SRV as opposed to 6ms in RV for a moderately popular notification).</li>
+<li>SRV computation time at publisher for the largest workload is nearly 4 ms, which is insignificant compared to cost at brokers for SRV protocol. Therefore, our protocol does not impose much overhead on the publishers.</li>
+</ol>
+<p>Based on our workload, message overhead per subscriber (i.e. extra bits added in header normalized by number of subscribers receiving a message) is only 4 Bytes. This shows the efficiency of our protocol in terms of network overhead.</p>
+<p><img class="img-thumbnail alignnone" src="https://engineering.purdue.edu/dcsl/images/privacy_status_figure2.png" alt="fig2" width="299" height="188" align="left" /><img class="img-thumbnail  alignnone" src="https://engineering.purdue.edu/dcsl/images/privacy_status_figure3.png" alt="fig3" width="299" height="188" align="right" /></p>
+<table border="0" width="590">
+<tbody>
+<tr>
+<td align="center" width="343" height="22">a) Baseline</td>
+<td align="center" width="237">b) RV</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><img class="img-thumbnail alignnone" src="https://engineering.purdue.edu/dcsl/images/privacy_status_figure4.png" alt="fig4" width="286" height="179" /></p>
+<p align="center">c) SRV</p>
+<p>It may be noted that in our current implementation, the leaf brokers are directly connected to subscribers and, therefore, have the potential to violate the anonymity requirements of the subscribers. To achieve subscriber anonymity from leaf brokers, we are currently implementing an anonymizing network between these entities. The nodes in this anonymizing network will have no notion of the filters but will act as proxies of the subscribers.</p>
+<p><a name="students"></a></p>
+<h2>Students</h2>
+<ul>
+<li><strong>Amiya Maji</strong>,Â  amaji AT purdue DOT edu</li>
+</ul>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> Last modified: March 18, 2015</small>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+						
+					
+				</main><!-- #main -->
+			</div><!-- #primary -->
+		</div> <!-- .col-lg-8 -->
+	<div class="col-lg-4">
+		
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://engineering.purdue.edu/dcsl/">
+    <div class="form-group">
+        <label>
+            <span class="screen-reader-text">Search for:</span>
+            <div class="input-group">
+                <input type="search" class="form-control col-lg-12" placeholder="Search …" value="" name="s" title="Search for:" />
+                <span class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </span>
+            </div>
+        <!-- <input type="submit" class="search-submit" value="Search" /> -->
+</form>
+
+</aside><aside id="nav_menu-2" class="widget widget_nav_menu"><h1 class="widget-title">Important Links</h1><div class="menu-important-links-container"><ul id="menu-important-links" class="menu"><li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="https://engineering.purdue.edu/dcsl/about/research-overview/">Research Overview</a></li>
+<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="https://engineering.purdue.edu/dcsl/about/ten-things-we-know/">Ten Things We Know To Be True At DCSL</a></li>
+<li id="menu-item-765" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-765"><a href="https://engineering.purdue.edu/dcsl/about/dcsl-in-the-media/">DCSL in the Media</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-19"><a href="https://engineering.purdue.edu/dcsl/project/">Projects</a></li>
+</ul></div></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent News</h1>		<ul>
+					<li>
+				<a href="https://engineering.purdue.edu/dcsl/february-2018/">February 2018</a>
+						</li>
+					<li>
+				<a href="https://engineering.purdue.edu/dcsl/january-2018/">January 2018</a>
+						</li>
+					<li>
+				<a href="https://engineering.purdue.edu/dcsl/december-2017/">December 2017</a>
+						</li>
+					<li>
+				<a href="https://engineering.purdue.edu/dcsl/dcsls-work-on-game-theory-and-cybersecurity-in-a-purdue-news-story/">November 2017</a>
+						</li>
+					<li>
+				<a href="https://engineering.purdue.edu/dcsl/august-2017/">August 2017</a>
+						</li>
+				</ul>
+		</aside></div><!-- #secondary -->
+	</div>
+</div> <!-- .row -->
+
+
+
+<!-- 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: dcsl by <a href="http://www.digital-inflection.com" rel="designer">Digital Inflection</a>.		</div>
+	</footer>
+</div> -->
+
+
+ <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Copyright &copy; 2018 Dependable Computing Systems Laboratory at <a href="http://www.purdue.edu">Purdue University</a> </p>
+                </div>
+                <div class="col-md-4 hidden-sm hidden-xs">
+                    <a href="http://www.purdue.edu"><img class="pull-right" src="https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/pu-logo.jpg" alt="Purdue University" /></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script><script type='text/javascript' src='https://engineering.purdue.edu/dcsl/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.6'></script>
+<script type='text/javascript' src='https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='https://engineering.purdue.edu/dcsl/wp-content/themes/dcsl/js/skip-link-focus-fix.js?ver=20130115'></script>
+
+
+
+</body>
+</html>
